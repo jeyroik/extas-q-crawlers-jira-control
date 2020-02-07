@@ -41,7 +41,7 @@ class CrawlerJiraControl extends Crawler
 
         if ($reaction) {
             $rate = round(30 / 1 + $reaction->getCountTotal(),2);
-            if (!$exist) {
+            if ($exist) {
                 $exist->setRate($rate)->setTimestamp(time());
                 $controlRepo->update($exist);
                 $output->writeln(['<info>Rate updated</info>']);
