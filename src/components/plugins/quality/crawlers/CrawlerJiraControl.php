@@ -40,7 +40,7 @@ class CrawlerJiraControl extends Crawler
         $exist = $controlRepo->one([IJiraControlRate::FIELD__MONTH => date('Ym')]);
 
         if ($reaction) {
-            $rate = round(30 / 1 + $reaction->getCountTotal(),2);
+            $rate = round(30 / (1 + $reaction->getCountTotal()),2);
             $output->writeln([
                 'Rate: ' . $rate
             ]);
