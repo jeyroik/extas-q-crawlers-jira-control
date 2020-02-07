@@ -19,8 +19,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CrawlerJiraControl extends Crawler
 {
-    protected $title = '';
-    protected $description = '';
+    protected $title = '[Jira] Issues rate';
+    protected $description = 'Calculate issues total and done rates.';
 
     /**
      * @param OutputInterface $output
@@ -41,6 +41,9 @@ class CrawlerJiraControl extends Crawler
 
         if ($reaction) {
             $rate = round(30 / 1 + $reaction->getCountTotal(),2);
+            $output->writeln([
+                'Rate: ' . $rate
+            ]);
             if ($exist) {
                 $exist->setRate($rate)->setTimestamp(time());
                 $controlRepo->update($exist);
