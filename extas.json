@@ -8,7 +8,7 @@
   ],
   "plugins": [
     {
-      "class": "extas\\components\\plugins\\PluginInstallJiracontrolRates",
+      "class": "extas\\components\\plugins\\PluginInstallJiraControlRates",
       "stage": "extas.install"
     },
     {
