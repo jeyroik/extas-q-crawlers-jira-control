@@ -1,0 +1,19 @@
+{
+  "name": "extas/quality-crawlers-jira-control",
+  "package_classes": [
+    {
+      "class": "extas\\components\\quality\\crawlers\\jira\\control\\rates\\JiraControlRateRepository",
+      "interface": "extas\\interfaces\\quality\\crawlers\\jira\\control\\rates\\IJiraControlRateRepository"
+    }
+  ],
+  "plugins": [
+    {
+      "class": "extas\\components\\plugins\\PluginInstallJiracontrolRates",
+      "stage": "extas.install"
+    },
+    {
+      "class": "extas\\components\\plugins\\quality\\crawlers\\CrawlerJiraControl",
+      "stage": "extas.quality.crawl"
+    }
+  ]
+}

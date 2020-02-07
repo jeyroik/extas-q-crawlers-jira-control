@@ -1,0 +1,15 @@
+{
+  "name": "jeyroik/extas-q-crawlers-jira-control",
+  "description": "Jira control crawler package",
+  "require": {
+    "guzzlehttp/guzzle": "^6.3",
+    "jeyroik/extas-installer": "*",
+    "jeyroik/extas-q-crawlers-jira": "*",
+    "jeyroik/extas-q-crawlers-jira-reaction": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "extas\\": "src/"
+    }
+  }
+}
