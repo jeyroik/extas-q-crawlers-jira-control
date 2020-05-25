@@ -14,5 +14,5 @@ use extas\interfaces\quality\crawlers\jira\IHasTimestamp;
  */
 interface IJiraControlRate extends IItem, IHasMonth, IHasTimestamp, IHasRate
 {
-    const SUBJECT = 'extas.quality.crawler.jira.control';
+    public const SUBJECT = 'extas.quality.crawler.jira.control';
 }

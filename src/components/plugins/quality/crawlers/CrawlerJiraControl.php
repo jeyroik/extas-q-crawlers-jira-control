@@ -19,8 +19,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class CrawlerJiraControl extends Crawler
 {
-    protected $title = '[Jira] Issues rate';
-    protected $description = 'Calculate issues total and done rates.';
+    protected string $title = '[Jira] Issues rate';
+    protected string $description = 'Calculate issues total and done rates.';
 
     /**
      * @param OutputInterface $output

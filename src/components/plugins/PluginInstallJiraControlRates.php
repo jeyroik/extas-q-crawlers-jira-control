@@ -12,9 +12,9 @@ use extas\interfaces\quality\crawlers\jira\control\rates\IJiraControlRateReposit
  */
 class PluginInstallJiraControlRates extends PluginInstallDefault
 {
-    protected $selfUID = JiraControlRate::FIELD__MONTH;
-    protected $selfRepositoryClass = IJiraControlRateRepository::class;
-    protected $selfSection = 'jira_control_rates';
-    protected $selfName = 'jira control rate';
-    protected $selfItemClass = JiraControlRate::class;
+    protected string $selfUID = JiraControlRate::FIELD__MONTH;
+    protected string $selfRepositoryClass = IJiraControlRateRepository::class;
+    protected string $selfSection = 'jira_control_rates';
+    protected string $selfName = 'jira control rate';
+    protected string $selfItemClass = JiraControlRate::class;
 }

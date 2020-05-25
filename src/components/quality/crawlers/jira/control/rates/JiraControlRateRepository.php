@@ -12,9 +12,8 @@ use extas\interfaces\quality\crawlers\jira\control\rates\IJiraControlRateReposit
  */
 class JiraControlRateRepository extends Repository implements IJiraControlRateRepository
 {
-    protected $itemClass = JiraControlRate::class;
-    protected $name = 'jira_control_rates';
-    protected $pk = JiraControlRate::FIELD__MONTH;
-    protected $scope = 'extas';
-    protected $idAs = '';
+    protected string $itemClass = JiraControlRate::class;
+    protected string $name = 'jira_control_rates';
+    protected string $pk = JiraControlRate::FIELD__MONTH;
+    protected string $scope = 'extas';
 }
