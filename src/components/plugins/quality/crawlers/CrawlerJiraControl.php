@@ -3,7 +3,6 @@ namespace extas\components\plugins\quality\crawlers;
 
 use extas\components\quality\crawlers\Crawler;
 use extas\components\quality\crawlers\jira\control\rates\JiraControlRate;
-use extas\components\SystemContainer;
 use extas\interfaces\quality\crawlers\ICrawler;
 use extas\interfaces\quality\crawlers\jira\control\rates\IJiraControlRate;
 use extas\interfaces\quality\crawlers\jira\control\rates\IJiraControlRateRepository;
@@ -13,6 +12,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class CrawlerJiraControl
+ *
+ * @method jiraControlRateRepository()
+ * @method jiraReactionRateRepository()
  *
  * @package extas\components\plugins\quality\crawlers
  * @author jeyroik@gmail.com
@@ -35,8 +37,8 @@ class CrawlerJiraControl extends Crawler
          * @var $reaction IJiraReactionRate
          */
         $month = (int) date('Ym');
-        $controlRepo = SystemContainer::getItem(IJiraControlRateRepository::class);
-        $reactionRepo = SystemContainer::getItem(IJiraReactionRateRepository::class);
+        $controlRepo = $this->jiraControlRateRepository();
+        $reactionRepo = $this->jiraReactionRateRepository();
         $reaction = $reactionRepo->one([IJiraReactionRate::FIELD__MONTH => $month]);
         $exist = $controlRepo->one([IJiraControlRate::FIELD__MONTH => $month]);
 
